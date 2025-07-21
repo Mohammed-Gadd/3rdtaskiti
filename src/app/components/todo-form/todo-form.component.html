@@ -1,0 +1,13 @@
+<div class="card mb-4 shadow-sm border-0 rounded-4" style="background: linear-gradient(135deg, #4e54c8, #8f94fb); color: white;">
+    <div class="card-header bg-transparent border-bottom-0 d-flex justify-content-between align-items-center">
+        <span class="fw-semibold">📝 Todo Form</span>
+        <h5 class="mb-0">Add New Task</h5>
+    </div>
+
+    <div class="card-body">
+        <div class="input-group mb-3">
+            <input [(ngModel)]="newTask" class="form-control form-control-lg rounded-start-3 border-0" placeholder="Enter new task" />
+            <button (click)="onAdd()" class="btn btn-light btn-lg rounded-end-3 shadow-sm">Add</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="container mt-5 p-4 shadow rounded bg-light">
+    <h1 class="text-center mb-4 text-primary fw-bold" style="font-size: 2.5rem;">🚀 To-Do App</h1>
+
+    <div class="todo-form card p-3 mb-4 border-0 shadow-sm">
+        <app-todo-form (addTodo)="addTodo($event)"></app-todo-form>
+    </div>
+
+    <div class="todo-list card p-3 border-0 shadow-sm">
+        <app-todo-list
+            [todos]="todos"
+            (onToggle)="toggleTodo($event)"
+            (onDelete)="deleteTodo($event)">
+        </app-todo-list>
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #ffffff;
+        border-radius: 1rem;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    .todo-list app-todo-list,
+    .todo-form app-todo-form {
+        width: 100%;
+    }
+
+    body {
+        background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    }
+</style>
